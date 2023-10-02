@@ -8,8 +8,22 @@
     "files": [
         "main.blocks",
         "main.ts",
-        "README.md",
-        "custom.ts"
+        "custom_functions.ts",
+        "custom_functions_NL.ts",
+        "t_level1_1.md",
+        "t_level1_2.md",
+        "t_level2_1.md",
+        "t_level2_2.md",
+        "t_level3_1.md",
+        "t_level3_2.md",
+        "t_level4.md",
+        "_locales/nl/t_level1_1.md",
+        "_locales/nl/t_level1_2.md",
+        "_locales/nl/t_level2_1.md",
+        "_locales/nl/t_level2_2.md",
+        "_locales/nl/t_level3_1.md",
+        "_locales/nl/t_level3_2.md",
+        "_locales/nl/t_level4.md"
     ],
     "testFiles": [
         "test.ts"
