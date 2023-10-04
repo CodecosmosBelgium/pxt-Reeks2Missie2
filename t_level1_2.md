@@ -4,7 +4,7 @@
 
 ```blocks
 player.onChat("placeWater", function () {
-    CodeCosmos.agentPlaceBlock(Water)
+    
     CodeCosmos.checkExercise()
 
 })
@@ -13,7 +13,7 @@ player.onChat("placeWater", function () {
 
 ```template
 player.onChat("placeWater", function () {
-    CodeCosmos.agentPlaceBlock(Lava)
+    
     CodeCosmos.checkExercise()
 })
 
