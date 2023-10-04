@@ -1,10 +1,3 @@
-enum Water_Lava {
-    //% block="`item.LavaBucket` lava"
-    LAVA,
-    //% block="`item.WaterBucket` water"
-    WATER
-}
-
 enum TwoDirectionForwardBack {
     //% block="forward"
     Forward = FourDirection.Forward,
