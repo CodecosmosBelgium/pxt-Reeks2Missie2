@@ -4,17 +4,14 @@
 
 ```blocks
 player.onChat("placeWater", function () {
-    
-    CodeCosmos.checkExercise()
-
+    AgentExtension.agentPlaceBlock(Water_Lava.WATER)
 })
 
 ```
 
 ```template
 player.onChat("placeWater", function () {
-    
-    CodeCosmos.checkExercise()
+    AgentExtension.agentPlaceBlock(Water_Lava.LAVA)
 })
 
 ```

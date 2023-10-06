@@ -1,3 +1,10 @@
+enum Water_Lava {
+    //% block="`item.LavaBucket` lava"
+    LAVA = Block.Lava,
+    //% block="`item.WaterBucket` water"
+    WATER = Block.Water
+}
+
 enum TwoDirectionForwardBack {
     //% block="forward"
     Forward = FourDirection.Forward,
@@ -30,7 +37,27 @@ namespace AgentExtension {
     //% amount.min=1 
     export function agentMoveFourDirection(direction: FourDirection, amount: number) {
         for (let i = 0; i < amount; i++) {
+            player.execute(`execute @p ~ ~ ~ setblock 107 43 -38 air`)
             agent.move(direction, 1)
+            loops.pause(50);
+            player.execute(`execute @p ~ ~ ~ setblock 107 43 -38 redstone_block`)
+        }
+    }
+
+    //% block="agent place $block"
+    export function agentPlaceBlock(block: Water_Lava) {
+        switch (block) {
+            case Water_Lava.WATER:
+                player.execute(`execute at @c run setblock ^ ^ ^1 water`);
+                loops.pause(50);
+                player.execute(`function exercises/end_exercise`);
+                break;
+
+            case Water_Lava.LAVA:
+                player.execute(`execute at @c run setblock ^ ^ ^1 lava`);
+                loops.pause(50);
+                player.execute(`function exercises/fail`);
+                break;
         }
     }
 }
@@ -38,7 +65,7 @@ namespace AgentExtension {
 //% color=190 weight=100 icon="\uf20a" block="CodeCosmos"
 namespace CodeCosmos {
     //% block="open trapdoor"
-    export function checkExercise() {
+    export function openTrapdoor() {
         const posBelowAgent = world(agent.getPosition().getValue(Axis.X), agent.getPosition().getValue(Axis.Y) - 1, agent.getPosition().getValue(Axis.Z))
         if (blocks.testForBlock(WOODEN_TRAPDOOR, posBelowAgent) && wrongMoves == 0) {
             player.execute(`function exercises/end_exercise`);
@@ -53,5 +80,13 @@ namespace CodeCosmos {
         wrongMoves = 0;
     }
 
-    
+    //% block="pickup tool"
+    export function pickupTool() {
+        player.execute(`execute @p ~ ~ ~ setblock 107 43 -38 air`)
+
+        player.execute(`function exercises/pickup_tool`)
+
+        loops.pause(50);
+        player.execute(`execute @p ~ ~ ~ setblock 107 43 -38 redstone_block`)
+    }
 }

@@ -5,7 +5,7 @@
 ```blocks
 player.onChat("moveTwoForward", function () {
     AgentExtension.agentMoveTwoDirectionForwardBack(TwoDirectionForwardBack.Forward, 2)
-    CodeCosmos.checkExercise()
+    CodeCosmos.openTrapdoor()
 })
 
 ```
@@ -13,7 +13,7 @@ player.onChat("moveTwoForward", function () {
 ```template
 player.onChat("moveTwoForward", function () {
     AgentExtension.agentMoveTwoDirectionForwardBack(TwoDirectionForwardBack.Back, 3)
-    CodeCosmos.checkExercise()
+    CodeCosmos.openTrapdoor()
 })
 
 ```
