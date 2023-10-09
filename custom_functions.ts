@@ -1,7 +1,7 @@
 enum Water_Lava {
-    //% block="`item.LavaBucket` lava"
+    //% block="lava `Item.LavaBucket`"
     LAVA = Block.Lava,
-    //% block="`item.WaterBucket` water"
+    //% block="water `Item.WaterBucket`"
     WATER = Block.Water
 }
 
@@ -34,13 +34,16 @@ namespace AgentExtension {
 
     //% block="agent move $direction by $amount"
     //% amount.defl=1
-    //% amount.min=1 
+    //% amount.min=1
     export function agentMoveFourDirection(direction: FourDirection, amount: number) {
         for (let i = 0; i < amount; i++) {
-            player.execute(`execute @p ~ ~ ~ setblock 107 43 -38 air`)
+            player.execute(`execute @p ~ ~ ~ setblock 108 43 -38 air`)
             agent.move(direction, 1)
+
             loops.pause(50);
-            player.execute(`execute @p ~ ~ ~ setblock 107 43 -38 redstone_block`)
+            player.execute(`function exercises/ex_3/move`)
+
+            player.execute(`execute @p ~ ~ ~ setblock 108 43 -38 redstone_block`)
         }
     }
 
@@ -48,13 +51,13 @@ namespace AgentExtension {
     export function agentPlaceBlock(block: Water_Lava) {
         switch (block) {
             case Water_Lava.WATER:
-                player.execute(`execute at @c run setblock ^ ^ ^1 water`);
+                player.execute(`execute @c ~ ~ ~ setblock ^ ^ ^1 water`);
                 loops.pause(50);
                 player.execute(`function exercises/end_exercise`);
                 break;
 
             case Water_Lava.LAVA:
-                player.execute(`execute at @c run setblock ^ ^ ^1 lava`);
+                player.execute(`execute @c ~ ~ ~ setblock ^ ^ ^1 lava`);
                 loops.pause(50);
                 player.execute(`function exercises/fail`);
                 break;
@@ -82,11 +85,11 @@ namespace CodeCosmos {
 
     //% block="pickup tool"
     export function pickupTool() {
-        player.execute(`execute @p ~ ~ ~ setblock 107 43 -38 air`)
-
-        player.execute(`function exercises/pickup_tool`)
+        player.execute(`execute @p ~ ~ ~ setblock 108 43 -38 air`)
 
         loops.pause(50);
-        player.execute(`execute @p ~ ~ ~ setblock 107 43 -38 redstone_block`)
+        player.execute(`function exercises/ex_3/pickup_tool`)
+
+        player.execute(`execute @p ~ ~ ~ setblock 108 43 -38 redstone_block`)
     }
 }
