@@ -48,15 +48,11 @@ namespace AgentExtension {
     export function agentPlaceBlock(block: Water_Lava) {
         switch (block) {
             case Water_Lava.WATER:
-                player.execute(`execute @c ~ ~ ~ setblock ^ ^ ^1 water`);
-                loops.pause(50);
-                player.execute(`function exercises/end_exercise`);
+                player.execute(`function exercises/ex_2/place_water`);
                 break;
 
             case Water_Lava.LAVA:
-                player.execute(`execute @c ~ ~ ~ setblock ^ ^ ^1 lava`);
-                loops.pause(50);
-                player.execute(`function exercises/fail`);
+                player.execute(`function exercises/ex_2/place_lava`);
                 break;
         }
     }
