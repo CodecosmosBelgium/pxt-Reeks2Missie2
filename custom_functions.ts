@@ -37,13 +37,10 @@ namespace AgentExtension {
     //% amount.min=1
     export function agentMoveFourDirection(direction: FourDirection, amount: number) {
         for (let i = 0; i < amount; i++) {
-            player.execute(`execute @p ~ ~ ~ setblock 108 43 -38 air`)
             agent.move(direction, 1)
 
             loops.pause(50);
             player.execute(`function exercises/ex_3/move`)
-
-            player.execute(`execute @p ~ ~ ~ setblock 108 43 -38 redstone_block`)
         }
     }
 
@@ -85,11 +82,7 @@ namespace CodeCosmos {
 
     //% block="pickup tool"
     export function pickupTool() {
-        player.execute(`execute @p ~ ~ ~ setblock 108 43 -38 air`)
-
         loops.pause(50);
         player.execute(`function exercises/ex_3/pickup_tool`)
-
-        player.execute(`execute @p ~ ~ ~ setblock 108 43 -38 redstone_block`)
     }
 }
