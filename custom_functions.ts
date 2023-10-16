@@ -1,7 +1,7 @@
 enum Water_Lava {
-    //% block="lava `Icon.LavaBucket`"
+    //% block="`Icon.LavaBucket` lava"
     LAVA = Block.Lava,
-    //% block="water `Icon.WaterBucket`"
+    //% block="`Icon.WaterBucket` water"
     WATER = Block.Water
 }
 
