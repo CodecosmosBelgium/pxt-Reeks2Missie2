@@ -10,20 +10,12 @@
         "main.ts",
         "custom_functions.ts",
         "custom_functions_NL.ts",
-        "t_level1_1.md",
-        "t_level1_2.md",
-        "t_level2_1.md",
-        "t_level2_2.md",
-        "t_level3_1.md",
-        "t_level3_2.md",
-        "t_level4.md",
-        "_locales/nl/t_level1_1.md",
-        "_locales/nl/t_level1_2.md",
-        "_locales/nl/t_level2_1.md",
-        "_locales/nl/t_level2_2.md",
-        "_locales/nl/t_level3_1.md",
-        "_locales/nl/t_level3_2.md",
-        "_locales/nl/t_level4.md"
+        "icons.jres",
+        "t_ex1.md",
+        "t_ex2.md",
+        "t_ex3.md",
+        "t_ex4.md",
+        "t_ex5.md"
     ],
     "testFiles": [
         "test.ts"

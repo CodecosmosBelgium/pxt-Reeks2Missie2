@@ -1,1 +1,2 @@
-let wrongMoves = 0
+let wrongMoves = 0;
+let amountOfMoves = 0;
