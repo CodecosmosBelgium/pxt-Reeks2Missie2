@@ -1,8 +1,10 @@
 enum Water_Lava {
     //% block="`Icon.LavaBucket` lava"
-    LAVA = Block.Lava,
+    //% jres alias=LAVA_BUCKET
+    Lava = Block.Lava,
     //% block="`Icon.WaterBucket` water"
-    WATER = Block.Water
+    //% jres alias=WATER_BUCKET
+    Water = Block.Water
 }
 
 enum TwoDirectionForwardBack {
@@ -40,11 +42,11 @@ namespace AgentExtension {
     //% liquid.loc.nl="blok"
     export function agentPlaceBlock(block: Water_Lava) {
         switch (block) {
-            case Water_Lava.WATER:
+            case Water_Lava.Water:
                 player.execute(`function exercises/ex_2/place_water`);
                 break;
 
-            case Water_Lava.LAVA:
+            case Water_Lava.Lava:
                 player.execute(`function exercises/ex_2/place_lava`);
                 break;
         }

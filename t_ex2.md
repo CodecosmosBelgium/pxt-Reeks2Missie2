@@ -4,14 +4,14 @@
 
 ```blocks
 player.onChat("placeWater", function () {
-    AgentExtension.agentPlaceBlock(Water_Lava.WATER)
+    AgentExtension.agentPlaceBlock(Water_Lava.Water)
 })
 
 ```
 
 ```template
 player.onChat("placeWater", function () {
-    AgentExtension.agentPlaceBlock(Water_Lava.LAVA)
+    AgentExtension.agentPlaceBlock(Water_Lava.Lava)
 })
 
 ```
