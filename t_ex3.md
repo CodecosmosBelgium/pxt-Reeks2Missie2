@@ -4,7 +4,7 @@
 
 ```blocks
 player.onChat("openDoor", function () {
-    AgentExtension.agentMoveTwoDirectionForwardBack(TwoDirectionForwardBack.Forward, 3)
+    AgentExtension.agentMoveTwoDirectionForwardBack_ex3(TwoDirectionForwardBack.Forward, 3)
     CodeCosmos.openDoor()
 })
 
