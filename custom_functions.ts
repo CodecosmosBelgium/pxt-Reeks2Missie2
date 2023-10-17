@@ -1,8 +1,8 @@
 enum Water_Lava {
-    //% blockIdentity="blocks.custom" enumval=0 block="´Water_Lava.LavaBucket´ lava"
+    //% blockIdentity="blocks.custom" enumval=0 block="lava"
     //% jres alias=LAVA_BUCKET
     Lava = 0,
-    //% blockIdentity="blocks.custom" enumval=1 block="´Water_Lava.WaterBucket´ water"
+    //% blockIdentity="blocks.custom" enumval=1 block="water"
     //% jres alias=WATER_BUCKET
     Water = 1
 }
