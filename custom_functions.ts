@@ -1,4 +1,4 @@
-enum Water_Lava {
+enum WaterLava {
     //% blockIdentity="blocks.custom" enumval=0 block="lava"
     //% jres alias=LAVA_BUCKET
     Lava = 0,
@@ -41,13 +41,13 @@ namespace AgentExtension {
     //% block="agent place $liquid"
     //% block.loc.nl="agent plaats $liquid"
     //% liquid.loc.nl="blok"
-    export function agentPlaceBlock(liquid: Water_Lava) {
+    export function agentPlaceBlock(liquid: WaterLava) {
         switch (liquid) {
-            case Water_Lava.Water:
+            case WaterLava.Water:
                 player.execute(`function exercises/ex_2/place_water`);
                 break;
 
-            case Water_Lava.Lava:
+            case WaterLava.Lava:
                 player.execute(`function exercises/ex_2/place_lava`);
                 break;
         }

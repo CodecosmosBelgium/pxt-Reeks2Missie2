@@ -10,12 +10,12 @@
         "main.ts",
         "custom_functions.ts",
         "custom_functions_NL.ts",
-        "icons.jres",
         "t_ex1.md",
         "t_ex2.md",
         "t_ex3.md",
         "t_ex4.md",
-        "t_ex5.md"
+        "t_ex5.md",
+        "WaterLava.jres"
     ],
     "testFiles": [
         "test.ts"
