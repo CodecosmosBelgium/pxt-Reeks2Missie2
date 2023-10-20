@@ -16,9 +16,9 @@ enum TwoDirectionForwardBack {
 
 enum AgentTurn {
     //% block="left"
-    Left = AgentTurn.Left,
+    Left = TurnDirection.Left,
     //% block="right"
-    Right = AgentTurn.Right
+    Right = TurnDirection.Right
 }
 
 
