@@ -100,7 +100,6 @@ namespace AgentExtension {
     //% amount.loc.nl="aantal"
     //% amount.defl=1
     //% amount.min=1
-    //% amount.max=3
     export function agentMoveFourDirection_ex5(direction: FourDirection, amount: number) {
         for (let i = 0; i < amount; i++) {
             agent.move(direction, 1)
