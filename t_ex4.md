@@ -4,6 +4,8 @@
 
 ```blocks
 player.onChat("activateElevator", function () {
+    agent.turn(LEFT_TURN)
+    agent.turn(RIGHT_TURN)
     AgentExtension.agentMoveFourDirection_ex4(FourDirection.Forward, 1)
     AgentExtension.agentMoveFourDirection_ex4(FourDirection.Right, 1)
     AgentExtension.agentMoveFourDirection_ex4(FourDirection.Forward, 1)

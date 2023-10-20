@@ -4,6 +4,8 @@
 
 ```blocks
 player.onChat("gooo", function () {
+    agent.turn(LEFT_TURN)
+    agent.turn(RIGHT_TURN)
     AgentExtension.agentMoveFourDirection_ex5(FourDirection.Forward, 3)
     AgentExtension.agentMoveFourDirection_ex5(FourDirection.Left, 4)
     CodeCosmos.pickupTool()
