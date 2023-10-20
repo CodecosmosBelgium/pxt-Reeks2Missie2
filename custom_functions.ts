@@ -7,13 +7,20 @@ enum WaterLava {
     Water = 1
 }
 
-
 enum TwoDirectionForwardBack {
     //% block="forward"
     Forward = FourDirection.Forward,
     //% block="back"
     Back = FourDirection.Back
 }
+
+enum AgentTurn {
+    //% block="left"
+    Left = AgentTurn.Left,
+    //% block="right"
+    Right = AgentTurn.Right
+}
+
 
 //% color="#D83B01" weight=100 icon="\uf20a" block="AgentExtension"
 namespace AgentExtension {
@@ -88,10 +95,20 @@ namespace AgentExtension {
             amountOfMoves++
             player.execute(`execute @p ~ ~ ~ setblock 107 43 -41 air`)
             loops.pause(50);
-            player.execute(`function exercises/ex_4/move`)
             player.execute(`execute @p ~ ~ ~ setblock 107 43 -41 redstone_block`)
 
         }
+    }
+
+    //% block="agent turn $direction"
+    //% block.loc.nl="agent draai $direction"
+    //% direction.loc.nl="richting"
+    export function agentTurn_ex4(direction: AgentTurn) {
+        agent.turn(direction === 0 ? LEFT : RIGHT)
+        amountOfMoves++
+        player.execute(`execute @p ~ ~ ~ setblock 107 43 -41 air`)
+        loops.pause(50);
+        player.execute(`execute @p ~ ~ ~ setblock 107 43 -41 redstone_block`)
     }
 
     //% block="agent move $direction by $amount"
