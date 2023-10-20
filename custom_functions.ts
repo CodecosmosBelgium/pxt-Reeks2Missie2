@@ -191,7 +191,7 @@ namespace CodeCosmos {
     //% block="pickup tool"
     //% block.loc.nl="raap gereedschap op"
     export function pickupTool() {
-        loops.pause(50);
         player.execute(`function exercises/ex_5/pickup_tool`)
+        loops.pause(50);
     }
 }
