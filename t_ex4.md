@@ -4,8 +4,8 @@
 
 ```blocks
 player.onChat("activateElevator", function () {
-    agent.turn(LEFT_TURN)
-    agent.turn(RIGHT_TURN)
+    AgentExtension.agentTurn_ex4(AgentTurn.Left)
+    AgentExtension.agentTurn_ex4(AgentTurn.Right)
     AgentExtension.agentMoveFourDirection_ex4(FourDirection.Forward, 1)
     AgentExtension.agentMoveFourDirection_ex4(FourDirection.Right, 1)
     AgentExtension.agentMoveFourDirection_ex4(FourDirection.Forward, 1)
@@ -18,9 +18,9 @@ player.onChat("activateElevator", function () {
 ```template
 player.onChat("activateElevator", function () {
     AgentExtension.agentMoveFourDirection_ex4(FourDirection.Forward, 1)
-    agent.turn(RIGHT_TURN)
-    AgentExtension.agentMoveFourDirection_ex4(FourDirection.Forward, 1)
-    agent.turn(LEFT_TURN)
+    AgentExtension.agentTurn_ex4(AgentTurn.Right)
+    AgentExtension.agentMoveFourDirection_ex4(FourDirection.Back, 1)
+    AgentExtension.agentTurn_ex4(AgentTurn.Left)
     AgentExtension.agentMoveFourDirection_ex4(FourDirection.Forward, 1)
     
 })
