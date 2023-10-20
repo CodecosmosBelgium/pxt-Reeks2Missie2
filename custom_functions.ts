@@ -109,7 +109,7 @@ namespace AgentExtension {
     //% block.loc.nl="agent draai $direction"
     //% direction.loc.nl="richting"
     export function agentTurn_ex4(direction: AgentTurn) {
-        agent.turn(direction === AgentTurn.Left ? LEFT : RIGHT)
+        agent.turn(direction)
         amountOfMoves++
         player.execute(`execute @p ~ ~ ~ setblock 107 43 -41 air`)
         loops.pause(50);
