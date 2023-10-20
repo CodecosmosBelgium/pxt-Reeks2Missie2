@@ -95,6 +95,11 @@ namespace AgentExtension {
             amountOfMoves++
             player.execute(`execute @p ~ ~ ~ setblock 107 43 -41 air`)
             loops.pause(50);
+            let posBelowAgent = world(agent.getPosition().getValue(Axis.X), agent.getPosition().getValue(Axis.Y) - 1, agent.getPosition().getValue(Axis.Z))
+            if (blocks.testForBlock(LIGHT_GRAY_CONCRETE, posBelowAgent)) {
+                player.execute(`execute @c ~ ~ ~ particle rwm:barrier ~ ~1 ~`)
+                wrongMoves++
+            }
             player.execute(`execute @p ~ ~ ~ setblock 107 43 -41 redstone_block`)
 
         }
