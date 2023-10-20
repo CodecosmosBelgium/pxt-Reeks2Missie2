@@ -125,10 +125,10 @@ namespace AgentExtension {
     export function agentMoveFourDirection_ex5(direction: FourDirection, amount: number) {
         for (let i = 0; i < amount; i++) {
             agent.move(direction, 1)
+            player.execute(`function exercises/ex_5/move`)
             player.execute(`execute @p ~ ~ ~ setblock 108 43 -41 air`)
             loops.pause(50);
             player.execute(`execute @p ~ ~ ~ setblock 108 43 -41 redstone_block`)
-            player.execute(`function exercises/ex_5/move`)
         }
     }
 }
