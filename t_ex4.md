@@ -7,7 +7,7 @@ player.onChat("activateElevator", function () {
     AgentExtension.agentMoveFourDirection_ex4(FourDirection.Forward, 1)
     AgentExtension.agentMoveFourDirection_ex4(FourDirection.Right, 1)
     AgentExtension.agentMoveFourDirection_ex4(FourDirection.Forward, 1)
-    AgentExtension.activateElevator
+    AgentExtension.activateElevator()
     
 })
 
