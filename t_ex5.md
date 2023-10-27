@@ -3,7 +3,7 @@
 # Mission 2 (v1.0)
 
 ```blocks
-player.onChat("gooo", function () {
+player.onChat("level5", function () {
     agent.turn(LEFT_TURN)
     agent.turn(RIGHT_TURN)
     AgentExtension.agentMoveFourDirection_ex5(FourDirection.Forward, 3)
@@ -15,7 +15,7 @@ player.onChat("gooo", function () {
 ```
 
 ```template
-player.onChat("gooo", function () {
+player.onChat("level5", function () {
     AgentExtension.agentMoveFourDirection_ex5(FourDirection.Forward, 3)
     AgentExtension.agentMoveFourDirection_ex5(FourDirection.Left, 4)
     CodeCosmos.pickupTool()
@@ -24,4 +24,5 @@ player.onChat("gooo", function () {
 ```
 
 ## Use the learning platform
+Agent needs to pick up the tools while standing on them.
 Use the learning platform to solve the exercise.

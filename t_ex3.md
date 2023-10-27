@@ -3,7 +3,7 @@
 # Mission 2 (v1.0)
 
 ```blocks
-player.onChat("openDoor", function () {
+player.onChat("level3", function () {
     AgentExtension.agentMoveTwoDirectionForwardBack_ex3(TwoDirectionForwardBack.Forward, 3)
     CodeCosmos.openDoor()
 })
@@ -11,11 +11,12 @@ player.onChat("openDoor", function () {
 ```
 
 ```template
-player.onChat("openDoor", function () {
+player.onChat("level3", function () {
 
 })
 
 ```
 
 ## Use the learning platform
+Agent needs to move forward and open the door.
 Use the learning platform to solve the exercise.
