@@ -162,7 +162,7 @@ namespace CodeCosmos {
                 player.execute(`tellraw @s {"rawtext":[{"translate":"stepped.wrong.path"}]}`);
             }
             if (amountOfMoves>3){
-                player.execute(`tellraw @s {"rawtext":[{"translate":"too.many.blocks.codebuilder"}]}`);
+                player.execute(`tellraw @s {"rawtext":[{"translate":"too.many.steps"}]}`);
             }            
             player.execute(`function exercises/ex_3/wrong`);
         }
