@@ -1,4 +1,3 @@
-# t_extra
 ### @hideIteration true
 ### @flyoutOnly true
 # Mission 2 (v1.0)
