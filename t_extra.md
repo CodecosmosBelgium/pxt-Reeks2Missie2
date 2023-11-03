@@ -6,20 +6,20 @@
 player.onChat("extra", function () {
     agent.turn(LEFT_TURN)
     agent.turn(RIGHT_TURN)
-    AgentExtension.agentMoveFourDirection_ex5(FourDirection.Forward, 3)
-    AgentExtension.agentMoveFourDirection_ex5(FourDirection.Left, 4)
-    CodeCosmos.pickupTool()
-    AgentExtension.agentMoveFourDirection_ex5(FourDirection.Forward, 1)
+    AgentExtension.agentMoveFourDirection_extra(FourDirection.Forward, 3)
+    AgentExtension.agentMoveFourDirection_extra(FourDirection.Left, 4)
+    CodeCosmos.pickupTool_extra()
+    AgentExtension.agentMoveFourDirection_extra(FourDirection.Forward, 1)
 })
 
 ```
 
 ```template
 player.onChat("extra", function () {
-    AgentExtension.agentMoveFourDirection_ex5(FourDirection.Forward, 3)
-    AgentExtension.agentMoveFourDirection_ex5(FourDirection.Left, 4)
-    CodeCosmos.pickupTool()
-    AgentExtension.agentMoveFourDirection_ex5(FourDirection.Forward, 1)
+    AgentExtension.agentMoveFourDirection_extra(FourDirection.Forward, 3)
+    AgentExtension.agentMoveFourDirection_extra(FourDirection.Left, 4)
+    CodeCosmos.pickupTool_extra()
+    AgentExtension.agentMoveFourDirection_extra(FourDirection.Forward, 1)
 })
 ```
 

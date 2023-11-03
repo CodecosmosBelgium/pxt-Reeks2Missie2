@@ -131,6 +131,22 @@ namespace AgentExtension {
             player.execute(`execute @p ~ ~ ~ setblock 108 43 -41 redstone_block`)
         }
     }
+  
+    //% block="agent move $direction by $amount"
+    //% block.loc.nl="agent beweeg $direction met $amount"
+    //% direction.loc.nl="richting"
+    //% amount.loc.nl="aantal"
+    //% amount.defl=1
+    //% amount.min=1
+    export function agentMoveFourDirection_extra(direction: FourDirection, amount: number) {
+        for (let i = 0; i < amount; i++) {
+            agent.move(direction, 1)
+            player.execute(`function exercises/extra/move`)
+            player.execute(`execute @p ~ ~ ~ setblock 108 43 -41 air`)
+            loops.pause(50);
+            player.execute(`execute @p ~ ~ ~ setblock 108 43 -41 redstone_block`)
+        }
+    }
 }
 
 //% color=190 weight=100 icon="\uf20a" block="CodeCosmos"
@@ -192,6 +208,13 @@ namespace CodeCosmos {
     //% block.loc.nl="raap gereedschap op"
     export function pickupTool() {
         player.execute(`function exercises/ex_5/pickup_tool`)
+        loops.pause(50);
+    }
+    
+    //% block="pickup tool"
+    //% block.loc.nl="raap gereedschap op"
+    export function pickupTool_extra() {
+        player.execute(`function exercises/extra/pickup_tool`)
         loops.pause(50);
     }
 }
