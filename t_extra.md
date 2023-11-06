@@ -15,7 +15,7 @@ player.onChat("extra", function () {
 ```
 
 ```template
-player.onChat("extra", function () {
+player.onChat("extraLevel", function () {
     AgentExtension.agentMoveFourDirection_extra(FourDirection.Forward, 3)
     AgentExtension.agentMoveFourDirection_extra(FourDirection.Left, 4)
     CodeCosmos.pickupTool_extra()
