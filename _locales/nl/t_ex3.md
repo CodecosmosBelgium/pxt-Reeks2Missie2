@@ -5,7 +5,7 @@
 ```blocks
 player.onChat("level3", function () {
     AgentExtension_NL.agentMoveTwoDirectionForwardBack_ex3(TwoDirectionForwardBack_NL.Forward, 3)
-    CodeCosmos.openDoor()
+    CodeCosmos_NL.openDoor()
 })
 
 ```

@@ -9,7 +9,7 @@ player.onChat("level4", function () {
     AgentExtension_NL.agentMoveFourDirection_ex4(FourDirection.Forward, 1)
     AgentExtension_NL.agentMoveFourDirection_ex4(FourDirection.Right, 1)
     AgentExtension_NL.agentMoveFourDirection_ex4(FourDirection.Forward, 1)
-    CodeCosmos.activateElevator()
+    CodeCosmos_NL.activateElevator()
     
 })
 
