@@ -15,8 +15,14 @@
         "t_ex3.md",
         "t_ex4.md",
         "t_ex5.md",
-        "WaterLava.jres",
-        "t_extra.md"
+        "t_extra.md",
+        "_locales/nl/t_ex1.md",
+        "_locales/nl/t_ex2.md",
+        "_locales/nl/t_ex3.md",
+        "_locales/nl/t_ex4.md",
+        "_locales/nl/t_ex5.md",
+        "_locales/nl/t_extra.md",
+        "WaterLava.jres"
     ],
     "testFiles": [
         "test.ts"
