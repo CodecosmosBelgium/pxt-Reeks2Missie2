@@ -14,7 +14,7 @@ enum TwoDirectionForwardBack_NL {
     Back = FourDirection.Back
 }
 
-enum AgentTurn {
+enum AgentTurn_NL {
     //% block="links"
     Left = TurnDirection.Left,
     //% block="rechts"
@@ -95,7 +95,7 @@ namespace AgentExtension_NL {
     }
 
     //% block="agent draai $direction"
-    export function agentTurn_ex4(direction: AgentTurn) {
+    export function agentTurn_ex4(direction: AgentTurn_NL) {
         agent.turn(direction)
         amountOfMoves++
         player.execute(`execute @p ~ ~ ~ setblock 107 43 -41 air`)
