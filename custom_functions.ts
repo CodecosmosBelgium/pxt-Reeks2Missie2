@@ -25,9 +25,6 @@ enum AgentTurn {
 //% color="#D83B01" weight=100 icon="\uf20a" block="AgentExtension"
 namespace AgentExtension {
     //% block="agent move $direction by $amount"
-    //% block.loc.nl="agent beweeg $direction met $amount"
-    //% direction.loc.nl="richting"
-    //% amount.loc.nl="aantal"
     //% amount.defl=1
     //% amount.min=1
     //% amount.max=3
@@ -46,8 +43,6 @@ namespace AgentExtension {
     }
 
     //% block="agent place $liquid"
-    //% block.loc.nl="agent plaats $liquid"
-    //% liquid.loc.nl="blok"
     export function agentPlaceBlock(liquid: WaterLava) {
         switch (liquid) {
             case WaterLava.Water:
@@ -61,9 +56,6 @@ namespace AgentExtension {
     }
 
     //% block="agent move $direction by $amount"
-    //% block.loc.nl="agent beweeg $direction met $amount"
-    //% direction.loc.nl="richting"
-    //% amount.loc.nl="aantal"
     //% amount.defl=1
     //% amount.min=1
     //% amount.max=3
@@ -83,9 +75,6 @@ namespace AgentExtension {
     }
 
     //% block="agent move $direction by $amount"
-    //% block.loc.nl="agent beweeg $direction met $amount"
-    //% direction.loc.nl="richting"
-    //% amount.loc.nl="aantal"
     //% amount.defl=1
     //% amount.min=1
     //% amount.max=3
@@ -106,8 +95,6 @@ namespace AgentExtension {
     }
 
     //% block="agent turn $direction"
-    //% block.loc.nl="agent draai $direction"
-    //% direction.loc.nl="richting"
     export function agentTurn_ex4(direction: AgentTurn) {
         agent.turn(direction)
         amountOfMoves++
@@ -117,9 +104,6 @@ namespace AgentExtension {
     }
 
     //% block="agent move $direction by $amount"
-    //% block.loc.nl="agent beweeg $direction met $amount"
-    //% direction.loc.nl="richting"
-    //% amount.loc.nl="aantal"
     //% amount.defl=1
     //% amount.min=1
     export function agentMoveFourDirection_ex5(direction: FourDirection, amount: number) {
@@ -133,9 +117,6 @@ namespace AgentExtension {
     }
   
     //% block="agent move $direction by $amount"
-    //% block.loc.nl="agent beweeg $direction met $amount"
-    //% direction.loc.nl="richting"
-    //% amount.loc.nl="aantal"
     //% amount.defl=1
     //% amount.min=1
     export function agentMoveFourDirection_extra(direction: FourDirection, amount: number) {
@@ -152,7 +133,6 @@ namespace AgentExtension {
 //% color=190 weight=100 icon="\uf20a" block="CodeCosmos"
 namespace CodeCosmos {
     //% block="open trapdoor"
-    //% block.loc.nl="open luik"
     export function openTrapdoor() {
         const posBelowAgent = world(agent.getPosition().getValue(Axis.X), agent.getPosition().getValue(Axis.Y) - 1, agent.getPosition().getValue(Axis.Z))
         if (blocks.testForBlock(WOODEN_TRAPDOOR, posBelowAgent) && wrongMoves == 0) {
@@ -169,7 +149,6 @@ namespace CodeCosmos {
     }
 
     //% block="open door"
-    //% block.loc.nl="open deur"
     export function openDoor() {
         if (amountOfMoves == 3 && wrongMoves == 0) {
             player.execute(`function exercises/end_exercise`);
@@ -187,7 +166,6 @@ namespace CodeCosmos {
     }
 
     //% block="activate elevator"
-    //% block.loc.nl="activeer lift"
     export function activateElevator() {
         if (amountOfMoves == 3 && wrongMoves == 0) {
             player.execute(`function exercises/end_exercise`);
@@ -205,14 +183,12 @@ namespace CodeCosmos {
     }
 
     //% block="pickup tool"
-    //% block.loc.nl="raap gereedschap op"
     export function pickupTool() {
         player.execute(`function exercises/ex_5/pickup_tool`)
         loops.pause(50);
     }
     
     //% block="pickup tool"
-    //% block.loc.nl="raap gereedschap op"
     export function pickupTool_extra() {
         player.execute(`function exercises/extra/pickup_tool`)
         loops.pause(50);
