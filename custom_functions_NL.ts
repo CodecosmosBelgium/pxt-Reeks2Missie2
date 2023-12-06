@@ -167,7 +167,7 @@ namespace CodeCosmos_NL {
 
     //% block="activeer lift"
     export function activateElevator() {
-        if (amountOfMoves == 3 && wrongMoves == 0) {
+        if (amountOfMoves == 3 && wrongMoves == 0 && agent.detect(AgentDetection.Block, FORWARD)) {
             player.execute(`function exercises/end_exercise`);
         } else {
             if (wrongMoves != 0) {
