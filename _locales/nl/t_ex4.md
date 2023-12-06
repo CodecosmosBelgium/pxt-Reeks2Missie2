@@ -17,11 +17,6 @@ player.onChat("level4", function () {
 
 ```template
 player.onChat("level4", function () {
-    AgentExtension_NL.agentMoveFourDirection_ex4(FourDirection.Forward, 1)
-    AgentExtension_NL.agentTurn_ex4(AgentTurn_NL.Right)
-    AgentExtension_NL.agentMoveFourDirection_ex4(FourDirection.Back, 1)
-    AgentExtension_NL.agentTurn_ex4(AgentTurn_NL.Left)
-    AgentExtension_NL.agentMoveFourDirection_ex4(FourDirection.Forward, 1)
     
 })
 
